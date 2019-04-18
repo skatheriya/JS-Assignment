@@ -67,11 +67,19 @@
 
     >>>> Array
 
-	const a=['name','age'];
-	var b=a;
+	const a = [1,2,3]
+	let b = [...a]
 	
 	<< console.log(a);
-	>> ["name", "age"]
+	>> [1,2,3]
 	
 	<< console.log(b);
-	>> ["name", "age"]
+	>> [1,2,3]
+	
+	b[1] = 4;
+	<< console.log(a);
+	>> [1,2,3]
+	
+	<< console.log(b);
+	>> [1,4,3]
+
