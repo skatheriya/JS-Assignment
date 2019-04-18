@@ -1,0 +1,45 @@
+
+=>> Closure (scope chain)
+
+function outer() {
+   var b = 10;
+   function inner() {
+        
+         var a = 20; 
+         console.log(a+b);
+    }
+   return inner;
+}
+
+<< outer()()
+>> VM44: 30
+
+<< outer()
+>> ƒ inner() {
+        
+         var a = 20; 
+         console.log(a+b);
+    }
+
+
+That's closure >>>>
+
+function outer() {
+var b = 10;
+   function inner() {
+        
+         var a = 20; 
+         console.log(a+b);
+    }
+   return inner;
+}
+var X = outer(); 
+<< console.dir(X)
+>> VM160:  ƒ inner()arguments: nullcaller: nulllength: 0name: "inner"prototype: {constructor: ƒ}__proto__: ƒ ()[[FunctionLocation]]:
+>> VM160: [[Scopes]]: Scopes[2]0: Closure (outer) {
+		b: 10
+		}
+		1: Global {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …}
+
+
+

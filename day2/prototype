@@ -1,0 +1,15 @@
+==>>> Prototype
+
+
+
+function Person(){
+
+}
+Person.prototype.name = "Sachin" ;
+Person.prototype.age = 22;
+Person.prototype.sayName = function(){
+	console.log(this.name);
+}
+var person1 = new Person();
+<< console.log(person1.name);
+>> VM160: Sachin

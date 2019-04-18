@@ -1,0 +1,77 @@
+==>>> Shallow Copy
+
+     >>>>Object
+	const a={name:'sachin',age:22};
+	var b=a;
+	
+	<< console.log(a);
+	>> {name: "sachin", age: 22}
+	
+	<< console.log(b);
+	>> {name: "sachin", age: 22}
+
+	b.name="Mayank";
+	<< console.log(a);
+	>> {name: "Mayank", age: 22}
+
+
+    >>>> Array
+
+	const a=['name','age'];
+	var b=a;
+	
+	<< console.log(a);
+	>> ["name", "age"]
+	
+	<< console.log(b);
+	>> ["name", "age"]
+
+
+==>>> Deep Copy
+
+
+ >>>>Object
+      >>Ex1
+	const a={name:'sachin',age:22};
+	var b={...a}; //using spread operator
+	
+	<< console.log(a);
+	>> {name: "sachin", age: 22}
+	
+	<< console.log(b);
+	>> {name: "sachin", age: 22}
+
+	b.name="Mayank";
+	<< console.log(a);
+	>> {name: "sachin", age: 22}
+
+	<< console.log(b);
+	>> {name: "Mayank", age: 22}
+     >>Ex2
+	const a={name:'sachin',age:22};
+	var b=Objects.assign({},a); //using Object.assign
+	
+	<< console.log(a);
+	>> {name: "sachin", age: 22}
+	
+	<< console.log(b);
+	>> {name: "sachin", age: 22}
+
+	b.name="Mayank";
+	<< console.log(a);
+	>> {name: "sachin", age: 22}
+
+	<< console.log(b);
+	>> {name: "Mayank", age: 22}
+
+
+    >>>> Array
+
+	const a=['name','age'];
+	var b=a;
+	
+	<< console.log(a);
+	>> ["name", "age"]
+	
+	<< console.log(b);
+	>> ["name", "age"]
