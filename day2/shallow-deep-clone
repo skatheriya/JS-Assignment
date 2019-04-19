@@ -68,7 +68,7 @@
     >>>> Array
 
 	const a = [1,2,3]
-	let b = [...a]
+	let b = [...a]  //using Object.assign
 	
 	<< console.log(a);
 	>> [1,2,3]

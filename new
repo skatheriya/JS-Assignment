@@ -1,0 +1,6 @@
+var target='abc'
+
+
+item = {abc:'234',target:'89'}
+
+item[target]
